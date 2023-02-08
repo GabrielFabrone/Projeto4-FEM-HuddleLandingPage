@@ -1,0 +1,10 @@
+@import './abstract/variaveis';
+@import './components/header';
+@import './components/main';
+@import './components/footer';
+
+html, body {
+    font-family: $fonte-principal;
+    font-weight: 400;
+    font-size: 18px;
+}

@@ -1,0 +1,99 @@
+footer {
+    background-color: $ciano-escuro;
+    padding: 10rem 1rem 2rem 1rem;
+    img {
+        width: 175px;
+        margin-bottom: .5rem;
+    }
+    //Primeira seção do rodape
+    .lista-contatos {
+        margin-bottom: 2rem;
+        .lista-contatos__items {
+            margin: 1rem .5rem;
+            .item-link {
+                display: flex;
+                i {
+                    padding-right: 1rem;
+                    color: $branco;
+                }
+                p {
+                    color: $ciano-claro;
+                    line-height: 1.3rem;
+                }
+            }
+        }
+    }
+    //SEGUNDA SEÇÃO DO RODAPE
+    .lista-links {
+        margin-bottom: 2rem;
+        .lista-links__items {
+            margin-bottom: 1rem;
+            .link {
+                color: $ciano-claro;
+            }
+        }
+    }
+    // TERCEIRA SEÇÃO DO RODAPE
+    .redes {
+        text-align: center;
+        .redes-container {
+            margin-bottom: 1.5rem;
+            i {
+                color: $branco;
+                font-size: 1.2rem;
+                border: 1px solid white;
+                padding: .5rem;
+                border-radius: 100%;
+                margin-right: .5rem;
+            }
+        }
+    }
+    h5 {
+        font-size: .7rem;
+        font-weight: 300;
+        color: $ciano-claro;
+        text-align: center;
+    }
+}
+
+//Estilizando o hover do rodape
+.link:hover, .lista-contatos__items .item-link p:hover {
+    text-decoration: underline;
+}
+
+.redes {
+    .redes-container {
+        i:hover {
+            color: $rosa;
+            border-color: $rosa;
+            transition: 0.2s;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    footer {
+        padding: 10rem 5rem 2rem 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        .lista-links {
+            align-self: center;
+            display: grid;
+            grid-template-rows: repeat(3,auto);
+            grid-template-columns: repeat(2,auto);
+            margin: .5rem 0 0 6rem;
+            .lista-links__items {
+                display: inline-block;
+            }
+        }
+        .redes {
+            align-self: center;
+            margin-bottom: 2rem;
+        }
+        h5 {
+            text-align: end;
+            grid-column: -2/-1;
+            padding-left: 5rem;
+        }
+    }
+}

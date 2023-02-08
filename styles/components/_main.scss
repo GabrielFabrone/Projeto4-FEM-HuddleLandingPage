@@ -1,0 +1,146 @@
+@import '../abstract/variaveis';
+
+main {
+    margin: 3rem 1rem 15rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-family: $fonte-principal;
+    font-weight: 400;
+    position: relative;
+
+    //Estilos dos Cards do conteudo principal da pagina
+    .card {
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        padding: 3rem 0 1.5rem 0;
+
+        img {
+            width: 80%;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 3rem 0 1rem 0;
+        }
+
+        p {
+            margin: 0 1.8rem;
+            font-size: .8rem;
+            color: $cinza-azulado;
+            line-height: 1.3rem;
+        }
+    }
+
+    //card falando sobre a comunidade
+    .comunidade {
+        width: 100%;
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        padding: 3rem 0;
+        background-color: $branco;
+        position: absolute;
+        bottom: -350px;
+
+        h3 {
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            background-color: $rosa;
+            padding: .5rem 2rem;
+            font-weight: 600;
+            font-size: .7rem;
+            color: $branco;
+            border-radius: 1rem;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    main {
+        margin: 3rem 5rem 15rem 5rem;
+    }
+
+    //Estilos dos Cards do conteudo principal da pagina telas maiores
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        img {
+            align-self: center;
+            justify-self: center;
+        }
+
+        .container {
+            text-align: start;
+            margin: 0 1rem 0 3rem;
+
+            h3 {
+                margin: 0 0 1rem;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    //Ajustando as imagens dos cards para a direita
+    .card:nth-child(1) {
+        .container {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        img {
+            grid-column: 2/3;
+        }
+    }
+
+    .card:nth-child(3) {
+        .container {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        img {
+            grid-column: 2/3;
+        }
+    }
+
+    main {
+        .card {
+            .container {
+                h3 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .comunidade {
+            width: 50%;
+
+            h3 {
+                font-size: 1.4rem;
+                padding-bottom: 1.5rem;
+            }
+
+            a {
+                font-size: .8rem;
+                padding: 1rem 4rem;
+                border-radius: 2rem;
+            }
+        }
+    }
+
+}
